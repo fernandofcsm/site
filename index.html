@@ -9,6 +9,7 @@
 <meta property="og:title" content="FCSM Representações - Soluções em Construção Civil">
 <meta property="og:description" content="Mais de 30 anos de experiência no mercado de construção civil">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://github.com/fernandofcsm/site/blob/main/logo.png?raw=true">
 <title>FCSM Representações | Soluções em Construção Civil</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +53,7 @@ padding: 0 40px;
 header {
 background: var(--secondary-dark);
 border-bottom: 1px solid var(--border-color);
-padding: 25px 0;
+padding: 15px 0;
 position: sticky;
 top: 0;
 z-index: 1000;
@@ -72,21 +73,31 @@ gap: 20px;
 }
 
 .logo-mark {
-width: 50px;
-height: 50px;
-background: linear-gradient(135deg, var(--accent-red), #8b1528);
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: 800;
-font-size: 24px;
-color: var(--text-primary);
-letter-spacing: -1px;
+    width: 180px;  /* Aumentado de 140px para 180px */
+    height: 180px; /* Aumentado de 140px para 180px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* Alterado para transparente para fundir com o header */
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+
+
+.logo-mark:hover {
+transform: scale(1.05);
+}
+
+.logo-mark img {
+width: 100%;
+height: 100%;
+object-fit: contain;
 }
 
 .logo-text h1 {
-font-size: 26px;
+font-size: 28px;
 font-weight: 700;
 color: var(--text-primary);
 letter-spacing: 0.5px;
@@ -686,6 +697,11 @@ font-size: 48px;
 .section-title {
 font-size: 38px;
 }
+
+.logo-mark {
+width: 110px;
+height: 110px;
+}
 }
 
 @media (max-width: 768px) {
@@ -697,6 +713,19 @@ gap: 20px;
 .header-contact {
 flex-direction: column;
 gap: 15px;
+}
+
+.logo-mark {
+width: 90px;
+height: 90px;
+}
+
+.logo-text h1 {
+font-size: 24px;
+}
+
+.logo-text p {
+font-size: 11px;
 }
 
 .hero {
@@ -736,7 +765,9 @@ grid-template-columns: 1fr;
 <div class="container">
 <div class="header-content">
 <div class="logo">
-<div class="logo-mark">FC</div>
+<div class="logo-mark">
+<img src="https://github.com/fernandofcsm/site/blob/main/logo.png?raw=true" alt="FCSM Logo">
+</div>
 <div class="logo-text">
 <h1>FCSM Representações</h1>
 <p>Construção civil</p>
